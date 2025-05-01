@@ -52,3 +52,23 @@ public:
 
         cout << "Your order has been successfully placed." << endl;
     }
+
+void serveOrder() {
+        if (front == nullptr) {
+            cout << "No orders to serve." << endl;
+            return;
+        }
+
+        order_customer* temp = front;
+        cout << "Serving order number: " << temp->ordernumber
+             << ", Customer: " << temp->customerName
+             << ", Dish: " << temp->dish << endl;
+
+        front = front->next;
+        if (front == nullptr) {
+            rear = nullptr;
+        }
+
+        delete temp;
+        totalServed++;
+    }
