@@ -126,3 +126,46 @@ void DisplayMenu() {
         cout << endl;
     }
 };
+
+int main() {
+    orderQueue queue;
+    int choice;
+
+    do {
+        cout << endl;
+        cout << "Restaurant Order Management System" << endl;
+        cout << "1. Display Menu" << endl;
+        cout << "2. Add New Order" << endl;
+        cout << "3. Serve Order" << endl;
+        cout << "4. Display Pending Orders" << endl;
+        cout << "5. Display Total Orders Served" << endl;
+        cout << "6. Exit " << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                queue.DisplayMenu();
+                break;
+            case 2:
+                queue.addOrder();
+                break;
+            case 3:
+                queue.serveOrder();
+                break;
+            case 4:
+                queue.PendingOrders();
+                break;
+            case 5:
+                queue.TotalServed();
+                break;
+            case 6:
+                cout << "Exiting, Thank You for choosing us!" << endl;
+                break;
+            default:
+                cout << "Invalid choice. Try again." << endl;
+        }
+    } while (choice != 6);
+
+    return 0;
+}
