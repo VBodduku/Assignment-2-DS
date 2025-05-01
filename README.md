@@ -72,3 +72,23 @@ void serveOrder() {
         delete temp;
         totalServed++;
     }
+
+void PendingOrders() {
+        if (front == nullptr) {
+            cout << "No pending orders." << endl;
+            return;
+        }
+
+        cout << "Pending Orders:" << endl;
+        order_customer* current = front;
+        while (current != nullptr) {
+            cout << "Order ID: " << current->ordernumber
+                 << ", Customer: " << current->customerName
+                 << ", Item: " << current->dish << "." << endl;
+            current = current->next;
+        }
+    }
+
+    void TotalServed() {
+        cout << "Total Orders Served: " << totalServed << endl;
+    }
