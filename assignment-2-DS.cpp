@@ -169,3 +169,20 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        cout << "Beverages:" << endl;
+        cout << "Masala Chai ₹30 - Spiced Indian tea brewed with milk." << endl;
+        cout << "Sweet Lassi ₹50 - Refreshing yogurt-based drink." << endl;
+        cout << endl;
